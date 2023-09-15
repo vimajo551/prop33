@@ -77,6 +77,7 @@ function setup() {
   button = createImg('cut_btn.png');
   button.position(200,320);
   button.size(50,50);
+  button.mouseClicked(drop2);
 
   button2 = createImg('cut_btn.png');
   button2.position(30,420);
@@ -131,10 +132,17 @@ function drop()
   con2 = null; 
 }
 
-function remove_rope()
+function drop2()
 {
   rope.break();
   con.dettach();
+  con = null; 
+}
+
+function remove_rope()
+{
+  rope.break();
+  //con.dettach();
   con = null; 
 }
 
